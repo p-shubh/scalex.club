@@ -1,5 +1,5 @@
 # scalex.club
-Create library management system for admin and regular user uncluding jwt authentication
+Create library management system for admin and regular user including jwt authentication
 
 ## Backend Developer Assignment: Library Management System
 
