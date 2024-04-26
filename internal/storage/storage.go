@@ -25,9 +25,9 @@ type User struct {
 }
 
 type Books struct {
-	BookName        string `json:"book_name"`
+	BookName        string `json:"bookName"`
 	Author          string `json:"author"`
-	PublicationYear string `json:"publication_year"`
+	PublicationYear string `json:"publicationYear"`
 }
 
 func GetBooks(userType string) ([]Books, error) {
@@ -65,6 +65,34 @@ func GetBooks(userType string) ([]Books, error) {
 			PublicationYear: record[2],
 		}
 		books = append(books, book)
+	}
+
+	if userType == "admin" {
+		path = "/Users/shubhamprajapati/Documents/p-shubh/scalex.club/internal/data/regularUser.csv"
+		file, err := os.Open(path)
+
+		if err != nil {
+			return nil, err
+		}
+		defer file.Close()
+
+		reader := csv.NewReader(file)
+		records, err := reader.ReadAll()
+		if err != nil {
+			return nil, err
+		}
+
+		// Skip header row
+		records = records[1:]
+
+		for _, record := range records {
+			book := Books{
+				BookName:        record[0],
+				Author:          record[1],
+				PublicationYear: record[2],
+			}
+			books = append(books, book)
+		}
 	}
 
 	return books, nil

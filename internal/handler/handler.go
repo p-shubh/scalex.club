@@ -60,13 +60,13 @@ func Home(c *gin.Context) {
 }
 
 type addBookRequest struct {
-	BookName        string `json:"book_name"`
+	BookName        string `json:"bookName"`
 	Author          string `json:"author"`
-	PublicationYear string `json:"publication_year"`
+	PublicationYear string `json:"publicationYear"`
 }
 
 type deleteBookRequest struct {
-	BookName string `json:"book_name"`
+	BookName string `json:"bookName"`
 }
 
 func AddBook(c *gin.Context) {
