@@ -3,6 +3,7 @@ Create library management system for admin and regular user uncluding jwt authen
 
 
 ## Backend Developer Assignment: Library Management System
+## Backend Developer Assignment: Library Management System
 
 ### Objective
 The goal of this assignment is to build a backend server for managing a library of books. The system will differentiate between two types of users: Admin and Regular Users. You will be implementing authentication, authorization, and data manipulation operations based on user roles.
@@ -10,8 +11,8 @@ The goal of this assignment is to build a backend server for managing a library 
 ### Getting Started
 
 #### Requirements
-- Node.js
-- Express.js
+- Go programming language
+- Gin framework for building web applications
 - JWT for authentication
 - Any text editor like VSCode
 - Postman for testing the API endpoints
@@ -19,9 +20,9 @@ The goal of this assignment is to build a backend server for managing a library 
 #### Setup Instructions
 1. Clone the repository from GitHub.
 2. Navigate into the project directory.
-3. Install dependencies using the command `npm install`.
-4. Start the server using `npm start`.
-5. The server will be running on `http://localhost:3000`.
+3. Install dependencies using `go mod tidy`.
+4. Start the server using `go run main.go`.
+5. The server will be running on `http://localhost:8080`.
 
 ### API Endpoints
 
